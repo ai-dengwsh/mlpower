@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: mlpower
+Version: 0.1.0
+Summary: A powerful machine learning library with advanced features
+Home-page: https://github.com/yourusername/mlpower
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.19.0
+Requires-Dist: pandas>=1.2.0
+Requires-Dist: scikit-learn>=0.24.0
+Requires-Dist: scipy>=1.6.0
+Requires-Dist: matplotlib>=3.3.0
+Requires-Dist: seaborn>=0.11.0
+
+# MLPower
+
+MLPower is a powerful and user-friendly machine learning library that provides advanced features for data preprocessing, feature engineering, model training, and evaluation.
+
+## Features
+
+- **Preprocessing**: Advanced data cleaning and preprocessing tools
+- **Feature Engineering**: Automated feature selection and engineering
+- **Models**: Implementation of various machine learning algorithms
+- **Evaluation**: Comprehensive model evaluation and comparison tools
+- **Utils**: Utility functions for common machine learning tasks
+
+## Installation
+
+```bash
+pip install mlpower
+```
+
+## Quick Start
+
+```python
+from mlpower.preprocessing import DataCleaner
+from mlpower.feature_engineering import FeatureSelector
+from mlpower.models import AutoML
+from mlpower.evaluation import ModelEvaluator
+
+# Load and preprocess data
+cleaner = DataCleaner()
+X_clean = cleaner.fit_transform(X)
+
+# Feature engineering
+selector = FeatureSelector()
+X_selected = selector.fit_transform(X_clean, y)
+
+# Train model
+model = AutoML()
+model.fit(X_selected, y)
+
+# Evaluate
+evaluator = ModelEvaluator()
+metrics = evaluator.evaluate(model, X_selected, y)
+```
+
+## Documentation
+
+For detailed documentation, please visit [documentation link].
+
+## Contributing
+
+We welcome contributions! Please see our contributing guidelines for details.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details. 
